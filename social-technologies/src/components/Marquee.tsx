@@ -9,7 +9,7 @@ const slide = keyframes`
 const Band = styled.div`
   overflow: hidden;
   border-block: 1.5px solid ${({ theme }) => theme.colors.ink};
-  padding: clamp(18px, 3vw, 34px) 0;
+  padding: clamp(12px, 1.8vw, 22px) 0;
   background: ${({ theme }) => theme.colors.bg};
 `;
 
@@ -28,11 +28,11 @@ const Row = styled.div<{ $speed: number }>`
 const Item = styled.span`
   display: inline-flex;
   align-items: center;
-  gap: clamp(20px, 3vw, 44px);
-  padding-right: clamp(20px, 3vw, 44px);
+  gap: clamp(16px, 2vw, 32px);
+  padding-right: clamp(16px, 2vw, 32px);
   font-weight: 900;
   letter-spacing: -0.045em;
-  font-size: clamp(40px, 7vw, 108px);
+  font-size: clamp(24px, 3.8vw, 54px);
   line-height: 1;
   white-space: nowrap;
 `;

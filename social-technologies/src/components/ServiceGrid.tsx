@@ -52,44 +52,44 @@ const Photo = styled.div`
 
 const Tag = styled.span`
   position: absolute;
-  top: 14px;
-  left: 14px;
-  padding: 6px 12px;
+  top: 12px;
+  left: 12px;
+  padding: 4px 10px;
   border-radius: 999px;
   background: ${({ theme }) => theme.colors.bg};
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.04em;
 `;
 
 const Body = styled.div`
-  padding: clamp(20px, 2vw, 28px);
+  padding: clamp(16px, 1.8vw, 22px);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   flex: 1;
 
   h3 {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 12px;
+    gap: 10px;
     font-weight: 800;
     letter-spacing: -0.03em;
-    line-height: 1.1;
-    font-size: clamp(21px, 2vw, 27px);
+    line-height: 1.15;
+    font-size: clamp(17px, 1.6vw, 21px);
   }
   p {
     color: ${({ theme }) => theme.colors.muted};
-    font-size: 16px;
-    line-height: 1.55;
+    font-size: 14px;
+    line-height: 1.5;
   }
   span.n {
     font-family: ${({ theme }) => theme.fonts.serif};
     font-style: italic;
     font-weight: 400;
     color: ${({ theme }) => theme.colors.blue};
-    font-size: 1.1em;
+    font-size: 1.05em;
   }
 `;
 

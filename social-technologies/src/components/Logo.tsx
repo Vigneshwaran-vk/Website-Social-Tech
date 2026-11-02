@@ -20,18 +20,18 @@ export function LogoMark({ size = 40, dark = false }: { size?: number; dark?: bo
 const Wrap = styled(Link)`
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 9px;
   white-space: nowrap;
 `;
 
 const Text = styled.span`
   display: inline-flex;
   align-items: baseline;
-  gap: 5px;
+  gap: 4px;
   font-family: ${({ theme }) => theme.fonts.ui};
   font-weight: 800;
   letter-spacing: -0.04em;
-  font-size: 22px;
+  font-size: 17px;
   line-height: 1;
 
   em {
@@ -39,13 +39,13 @@ const Text = styled.span`
     font-style: italic;
     font-weight: 400;
     letter-spacing: -0.02em;
-    font-size: 25px;
+    font-size: 19px;
   }
 
   @media (max-width: 420px) {
-    font-size: 19px;
+    font-size: 15px;
     em {
-      font-size: 22px;
+      font-size: 17px;
     }
   }
 `;
@@ -53,7 +53,7 @@ const Text = styled.span`
 export function Logo() {
   return (
     <Wrap to="/" aria-label="Social Technologies — home">
-      <LogoMark size={44} />
+      <LogoMark size={32} />
       <Text>
         Social
         <em>Technologies</em>

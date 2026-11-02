@@ -11,7 +11,7 @@ import { Logo } from './Logo';
 
 const Bar = styled.header`
   position: fixed;
-  top: 14px;
+  top: 10px;
   left: 0;
   right: 0;
   z-index: 100;
@@ -27,7 +27,7 @@ const Inner = styled.div`
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: 16px;
-  padding: 10px 12px 10px 22px;
+  padding: 11px 12px 11px 22px;
   border-radius: 999px;
   font-family: ${({ theme }) => theme.fonts.ui};
 
@@ -35,22 +35,24 @@ const Inner = styled.div`
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.42));
   backdrop-filter: blur(24px) saturate(1.8);
   -webkit-backdrop-filter: blur(24px) saturate(1.8);
-  border: 1px solid rgba(255, 255, 255, 0.8);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), inset 0 -1px 0 rgba(255, 255, 255, 0.35),
     0 14px 40px -14px rgba(25, 40, 90, 0.25), 0 2px 8px rgba(25, 40, 90, 0.06);
 
   @media (max-width: 860px) {
     grid-template-columns: 1fr auto;
-    padding: 8px 8px 8px 16px;
+    padding: 8px 10px 8px 18px;
   }
 `;
 
 const Left = styled.div`
   justify-self: start;
+  display: flex;
+  align-items: center;
 `;
 
 const Links = styled.nav`
   display: flex;
+  align-items: center;
   gap: 4px;
 
   @media (max-width: 860px) {
@@ -59,10 +61,14 @@ const Links = styled.nav`
 `;
 
 const Item = styled(NavLink)`
-  padding: 13px 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 16px;
   border-radius: 999px;
   font-weight: 500;
-  font-size: 17px;
+  font-size: 14px;
+  line-height: 1.2;
   letter-spacing: -0.01em;
   color: #373c4a;
   transition: background 0.35s, color 0.35s;
@@ -81,13 +87,14 @@ const Cta = styled(Link)`
   justify-self: end;
   display: inline-flex;
   align-items: center;
-  gap: 14px;
-  padding: 16px 26px;
+  gap: 8px;
+  padding: 8px 18px;
   border-radius: 999px;
   background: ${({ theme }) => theme.colors.ink};
   color: #fff;
   font-weight: 600;
-  font-size: 17px;
+  font-size: 14px;
+  line-height: 1.2;
   letter-spacing: -0.015em;
   transition: background 0.35s, transform 0.4s ${({ theme }) => theme.ease};
 
@@ -109,8 +116,8 @@ const Cta = styled(Link)`
 
 const Burger = styled.button<{ $open: boolean }>`
   display: none;
-  width: 48px;
-  height: 48px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   border: 0;
   background: ${({ theme }) => theme.colors.ink};
@@ -119,19 +126,19 @@ const Burger = styled.button<{ $open: boolean }>`
 
   span {
     position: absolute;
-    left: 15px;
-    right: 15px;
+    left: 10px;
+    right: 10px;
     height: 2px;
     background: currentColor;
     border-radius: 2px;
     transition: transform 0.4s ${({ theme }) => theme.ease}, top 0.4s ${({ theme }) => theme.ease};
   }
   span:first-child {
-    top: ${({ $open }) => ($open ? '23px' : '18px')};
+    top: ${({ $open }) => ($open ? '17px' : '13px')};
     transform: rotate(${({ $open }) => ($open ? '45deg' : '0')});
   }
   span:last-child {
-    top: ${({ $open }) => ($open ? '23px' : '28px')};
+    top: ${({ $open }) => ($open ? '17px' : '21px')};
     transform: rotate(${({ $open }) => ($open ? '-45deg' : '0')});
   }
 
@@ -146,23 +153,23 @@ const Overlay = styled(motion.div)`
   inset: 0;
   z-index: 90;
   background: ${({ theme }) => theme.colors.bg};
-  padding: 120px ${({ theme }) => theme.gutter} 32px;
+  padding: 90px ${({ theme }) => theme.gutter} 28px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 32px;
+  gap: 28px;
   overflow-y: auto;
 `;
 
 const MobileLink = styled(NavLink)`
   display: flex;
   align-items: baseline;
-  gap: 14px;
-  padding: 8px 0;
+  gap: 12px;
+  padding: 6px 0;
   font-weight: 900;
   letter-spacing: -0.045em;
   line-height: 1;
-  font-size: clamp(48px, 15vw, 84px);
+  font-size: clamp(32px, 9vw, 52px);
 
   small {
     font-family: ${({ theme }) => theme.fonts.serif};
@@ -184,7 +191,7 @@ const MobileCta = styled(Cta)`
 `;
 
 const ArrowUpRight = () => (
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
     <path
       d="M3.5 12.5 12.5 3.5M5 3.5h7.5V11"
       stroke="currentColor"

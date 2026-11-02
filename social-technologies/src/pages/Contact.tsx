@@ -20,13 +20,13 @@ import { IMG } from '../lib/images';
 import { usePageTitle } from '../lib/usePageTitle';
 
 const Hero = styled.section`
-  padding: clamp(130px, 15vw, 210px) 0 clamp(24px, 4vw, 48px);
+  padding: clamp(84px, 9vw, 120px) 0 clamp(24px, 4vw, 48px);
 `;
 
 const HeroInner = styled.div`
   display: flex;
   flex-direction: column;
-  gap: clamp(22px, 3vw, 34px);
+  gap: clamp(16px, 2.5vw, 26px);
   align-items: flex-start;
 `;
 

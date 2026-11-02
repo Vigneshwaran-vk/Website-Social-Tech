@@ -14,7 +14,7 @@ import { IMG } from '../lib/images';
 import { usePageTitle } from '../lib/usePageTitle';
 
 const Hero = styled.section`
-  padding: clamp(120px, 14vw, 190px) 0 clamp(56px, 8vw, 110px);
+  padding: clamp(80px, 8vw, 110px) 0 clamp(32px, 4vw, 56px);
   overflow: hidden;
 `;
 
@@ -22,7 +22,7 @@ const HeroGrid = styled.div`
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   align-items: center;
-  gap: clamp(28px, 4vw, 64px);
+  gap: clamp(20px, 3vw, 44px);
 
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
@@ -33,7 +33,7 @@ const HeroText = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: clamp(22px, 3vw, 34px);
+  gap: clamp(14px, 2vw, 22px);
 `;
 
 const Actions = styled.div`
@@ -44,19 +44,19 @@ const Actions = styled.div`
 
 const StackWrap = styled.div`
   position: relative;
-  width: min(100%, 520px);
+  width: min(100%, 420px);
   justify-self: center;
   padding: 0 4%;
 
   @media (max-width: 900px) {
-    padding: 0 10%;
+    padding: 0 8%;
   }
 `;
 
 const BadgePos = styled.div`
   position: absolute;
   left: -2%;
-  bottom: 2%;
+  bottom: 0;
   z-index: 3;
 
   @media (max-width: 900px) {
@@ -66,14 +66,15 @@ const BadgePos = styled.div`
 `;
 
 const Statement = styled(Section)`
-  padding-bottom: clamp(48px, 7vw, 100px);
+  padding-top: clamp(32px, 4vw, 64px);
+  padding-bottom: clamp(32px, 4vw, 64px);
 `;
 
 const StripHead = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  gap: 24px;
+  gap: 20px;
   flex-wrap: wrap;
 
   h2 {
@@ -84,15 +85,15 @@ const StripHead = styled.div`
 const SectionHead = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin-bottom: clamp(36px, 5vw, 72px);
-  max-width: 800px;
+  gap: 14px;
+  margin-bottom: clamp(24px, 3.5vw, 48px);
+  max-width: 720px;
 `;
 
 const Band = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(28px, 5vw, 80px);
+  gap: clamp(24px, 4vw, 60px);
   align-items: center;
 
   @media (max-width: 900px) {
@@ -104,18 +105,18 @@ const BandText = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  gap: 18px;
 `;
 
 const CTA = styled.div`
   background: ${({ theme }) => theme.colors.blue};
   color: #fff;
-  border-radius: clamp(26px, 4vw, 48px);
-  padding: clamp(40px, 7vw, 100px) clamp(24px, 5vw, 80px);
+  border-radius: clamp(20px, 3vw, 36px);
+  padding: clamp(32px, 5vw, 64px) clamp(20px, 4vw, 56px);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 28px;
+  gap: 20px;
   overflow: hidden;
 
   em {
@@ -172,7 +173,7 @@ export default function Home() {
                 ]}
               />
               <BadgePos>
-                <RotatingBadge size={148} />
+                <RotatingBadge size={118} />
               </BadgePos>
             </StackWrap>
           </HeroGrid>

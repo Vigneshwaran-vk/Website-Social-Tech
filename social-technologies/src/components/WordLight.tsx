@@ -6,9 +6,9 @@ import styled from 'styled-components';
 const P = styled.p`
   font-weight: 800;
   letter-spacing: -0.035em;
-  line-height: 1.12;
-  font-size: clamp(28px, 4.6vw, 68px);
-  max-width: 22em;
+  line-height: 1.2;
+  font-size: clamp(22px, 3.2vw, 42px);
+  max-width: 26em;
 
   em {
     font-family: ${({ theme }) => theme.fonts.serif};

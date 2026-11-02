@@ -11,7 +11,7 @@ export const Container = styled.div`
 
 export const Section = styled.section`
   position: relative;
-  padding: clamp(72px, 11vw, 160px) 0;
+  padding: clamp(44px, 6vw, 92px) 0;
 `;
 
 export const Eyebrow = styled.span`
@@ -35,22 +35,22 @@ export const Eyebrow = styled.span`
 export const Display = styled.h1`
   font-weight: 900;
   letter-spacing: -0.045em;
-  line-height: 0.96;
-  font-size: clamp(44px, 7.4vw, 120px);
+  line-height: 1.02;
+  font-size: clamp(34px, 4.8vw, 70px);
 `;
 
 export const H2 = styled.h2`
   font-weight: 900;
   letter-spacing: -0.04em;
-  line-height: 1;
-  font-size: clamp(36px, 5.8vw, 88px);
+  line-height: 1.08;
+  font-size: clamp(26px, 3.4vw, 48px);
 `;
 
 export const H3 = styled.h3`
   font-weight: 800;
   letter-spacing: -0.03em;
-  line-height: 1.1;
-  font-size: clamp(22px, 2.2vw, 30px);
+  line-height: 1.15;
+  font-size: clamp(18px, 1.8vw, 24px);
 `;
 
 /** Italic serif accent used inside headlines. */
@@ -64,8 +64,8 @@ export const Accent = styled.em`
 `;
 
 export const Lead = styled.p`
-  font-size: clamp(17px, 1.5vw, 21px);
-  line-height: 1.6;
+  font-size: clamp(15px, 1.2vw, 18px);
+  line-height: 1.55;
   color: ${({ theme }) => theme.colors.muted};
   max-width: 54ch;
 `;
@@ -78,11 +78,11 @@ const buttonStyle = css<{ $variant: Variant }>`
   position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  padding: 16px 26px;
+  gap: 9px;
+  padding: 11px 22px;
   border-radius: 999px;
   font-weight: 800;
-  font-size: 16px;
+  font-size: 14.5px;
   letter-spacing: -0.01em;
   border: 1.5px solid transparent;
   transition: transform 0.4s ${({ theme }) => theme.ease}, background 0.3s, color 0.3s,
@@ -146,7 +146,7 @@ export const SubmitButton = styled.button<{ $variant: Variant }>`
 `;
 
 export const Arrow = () => (
-  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+  <svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true">
     <path
       d="M3 9h11M10 4.5 14.5 9 10 13.5"
       stroke="currentColor"

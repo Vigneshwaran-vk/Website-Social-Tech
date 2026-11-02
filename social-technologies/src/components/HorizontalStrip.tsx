@@ -17,8 +17,8 @@ const Sticky = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: clamp(20px, 4vh, 44px);
-  padding-top: 104px;
+  gap: clamp(16px, 3vh, 32px);
+  padding-top: 72px;
 `;
 
 const Head = styled.div`
@@ -41,12 +41,12 @@ const Slide = styled.figure<{ $i: number }>`
   margin: 0;
   position: relative;
   flex-shrink: 0;
-  width: clamp(220px, 30vw, 420px);
-  height: clamp(260px, 44vh, 500px);
-  border-radius: 24px;
+  width: clamp(190px, 24vw, 340px);
+  height: clamp(220px, 36vh, 380px);
+  border-radius: 20px;
   overflow: hidden;
   background: #e1e6f0;
-  transform: translateY(${({ $i }) => ($i % 2 === 0 ? '-3%' : '4%')});
+  transform: translateY(${({ $i }) => ($i % 2 === 0 ? '-2%' : '3%')});
 
   img {
     width: 100%;
@@ -62,12 +62,12 @@ const Slide = styled.figure<{ $i: number }>`
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 56px 18px 16px;
+    padding: 38px 14px 12px;
     color: #fff;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.62), transparent);
     font-weight: 800;
     letter-spacing: -0.02em;
-    font-size: clamp(16px, 1.5vw, 20px);
+    font-size: clamp(14px, 1.2vw, 17px);
     line-height: 1.15;
   }
   figcaption span {
